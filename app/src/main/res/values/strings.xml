@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EnduceV0.1</string>
+    <string name="username_text">User Name</string>
+    <string name="passowrd_text">Password</string>
+</resources>
