@@ -1,5 +1,7 @@
 package com.nishadjamaldeen.enducev01;
 
+import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +27,7 @@ public class login extends AppCompatActivity {
                     @Override
                     public void onClick(View v){
                         if(username.getText().toString().equals("admin") && password.getText().toString().equals("password")){
+                            launchHomePage();
 
                         }else{
                             Toast.makeText(login.this, "Username and/or password incorrect!", Toast.LENGTH_LONG).show();
@@ -32,6 +35,11 @@ public class login extends AppCompatActivity {
                     }
                 }
         );
+    }
+
+    private void launchHomePage(){
+        Intent intent = new Intent(this, HomeScreen.class);
+        startActivity(intent);
     }
 }
 
