@@ -16,15 +16,19 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        EditText username = (EditText) findViewById(R.id.username);
-        EditText password = (EditText) findViewById(R.id.password);
-        Button loginButton = (Button) findViewById(R.id.button);
+        final EditText username = (EditText) findViewById(R.id.username);
+        final EditText password = (EditText) findViewById(R.id.password);
+        Button loginButton = (Button) findViewById(R.id.login);
 
         loginButton.setOnClickListener(
-                new View.OnClickListener() {
+                new View.OnClickListener(){
                     @Override
-                    public void onClick(View v) {
-                        Log.i(TAG, "Reached Here!");
+                    public void onClick(View v){
+                        if(username.getText().toString().equals("admin") && password.getText().toString().equals("password")){
+
+                        }else{
+                            Toast.makeText(login.this, "Username and/or password incorrect!", Toast.LENGTH_LONG).show();
+                        }
                     }
                 }
         );
