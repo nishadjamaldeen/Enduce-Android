@@ -18,7 +18,6 @@ public class HomeScreen extends AppCompatActivity {
         setContentView(R.layout.activity_home_screen);
 
 
-
     }
 
     public void changeTreatment(View view){
