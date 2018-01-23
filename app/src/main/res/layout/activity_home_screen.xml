@@ -79,4 +79,14 @@
         android:layout_centerHorizontal="true"
         android:onClick="getAnalytics"/>
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ff8300"
+        android:alpha="0.8"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
 </RelativeLayout>
