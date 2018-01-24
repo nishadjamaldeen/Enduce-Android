@@ -22,13 +22,13 @@ public class TreatmentAdapter extends ArrayAdapter<Treatment> {
 
     private Context context;
     private int resourceID;
-    private ArrayList<Treatment> treatment  = null;
+    private ArrayList<Treatment> treatments  = null;
 
     public TreatmentAdapter(Context context, int resourceID, List<Treatment> list){
         super(context, resourceID, list);
         this.context = context;
         this.resourceID = resourceID;
-        this.treatment = (ArrayList<Treatment>) list;
+        this.treatments = (ArrayList<Treatment>) list;
     }
 
     @Override
@@ -55,15 +55,23 @@ public class TreatmentAdapter extends ArrayAdapter<Treatment> {
             treatmentPlace = (TreatmentPlace) row.getTag();
         }
 
+        Treatment treatment = treatments.get(position);
+        treatmentPlace.duration.setText(String.valueOf(treatment.getDuration()));
+        treatmentPlace.name.setText(String.valueOf(treatment.getName()));
+        treatmentPlace.intensity.setText(String.valueOf(treatment.getIntensity()));
+        treatmentPlace.frequency.setText(String.valueOf(treatment.getFrequency()));
+
         return row;
+    }
+
+    class TreatmentPlace{
+        protected TextView name;
+        protected TextView intensity;
+        protected TextView frequency;
+        protected TextView duration;
     }
 
 
 }
 
-class TreatmentPlace{
-    protected TextView name;
-    protected TextView intensity;
-    protected TextView frequency;
-    protected TextView duration;
-}
+

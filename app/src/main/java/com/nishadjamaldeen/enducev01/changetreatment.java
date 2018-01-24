@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.nishadjamaldeen.enducev01.adapters.TreatmentAdapter;
 import com.nishadjamaldeen.enducev01.data.Treatment;
 
 import java.lang.reflect.Array;
@@ -58,11 +59,8 @@ public class changetreatment extends AppCompatActivity
         treatments = (ArrayList<Treatment>) bundle.getSerializable("treatments");
 
         ListView listView = (ListView) findViewById(R.id.treatment);
-        ArrayAdapter<Treatment> arrayAdapter = new ArrayAdapter<Treatment>(this, android.R.layout.simple_list_item_1, treatments);
+        ArrayAdapter<Treatment> arrayAdapter = new TreatmentAdapter(this, R.layout.listviewobj, treatments);
         listView.setAdapter(arrayAdapter);
-
-
-
     }
 
     @Override
