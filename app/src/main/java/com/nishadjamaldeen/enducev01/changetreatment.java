@@ -20,6 +20,7 @@ import android.widget.ListView;
 import com.nishadjamaldeen.enducev01.adapters.TreatmentAdapter;
 import com.nishadjamaldeen.enducev01.data.Treatment;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -35,7 +36,7 @@ public class changetreatment extends AppCompatActivity
         setContentView(R.layout.activity_changetreatment);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle("Change Treatment");
+        setTitle("Change TreatmentActivity");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +56,7 @@ public class changetreatment extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("treatments");
         treatments = (ArrayList<Treatment>) bundle.getSerializable("treatments");
 
@@ -66,6 +67,12 @@ public class changetreatment extends AppCompatActivity
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Treatment treatment = (Treatment) adapterView.getItemAtPosition(i);
+                Intent activityChangeIntent = new Intent(changetreatment.this, TreatmentActivity.class);
+                Bundle sendBundle = new Bundle();
+                sendBundle.putSerializable("treatmentData", (Serializable) treatment);
+                activityChangeIntent.putExtra("treatmentBundle", sendBundle);
+                startActivity(activityChangeIntent);
 
             }
         });

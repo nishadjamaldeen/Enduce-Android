@@ -1,5 +1,6 @@
 package com.nishadjamaldeen.enducev01;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,9 +13,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
-public class Treatment extends AppCompatActivity
+import com.nishadjamaldeen.enducev01.data.Treatment;
+
+public class TreatmentActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    final private EditText frequency = (EditText) findViewById(R.id.editfreq);
+    final private EditText intensity = (EditText) findViewById(R.id.editintensity);
+    final private EditText duration = (EditText) findViewById(R.id.editduration);
+    private Intent incomingIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +49,14 @@ public class Treatment extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        incomingIntent = getIntent();
+        Bundle bundle = incomingIntent.getBundleExtra("treatmentBundle");
+        Treatment treatment = (Treatment) bundle.getSerializable("treatmentData");
+
+        frequency.setText(String.valueOf(treatment.getFrequency()));
+        intensity.setText(String.valueOf(treatment.getIntensity()));
+        duration.setText(String.valueOf(treatment.getDuration()));
     }
 
     @Override
@@ -98,4 +115,6 @@ public class Treatment extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }
