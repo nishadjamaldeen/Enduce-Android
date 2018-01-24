@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/listobj">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="144dp"
+        android:padding="6dp"
+        android:text="TextView"
+        android:textSize="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:id="@+id/treatmentlinearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/name"
+        android:layout_toEndOf="@+id/name"
+        android:layout_marginStart="25dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/intensitytitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/name"
+            android:layout_marginEnd="25dp"
+            android:text="Intensity:"
+            android:layout_weight="0.56" />
+
+        <TextView
+            android:id="@+id/intensity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/intensitytitle"
+            android:layout_toStartOf="@+id/intensitytitle"
+            android:text="TextView" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/frequencytitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/treatmentlinearlayout"
+        android:layout_alignTop="@+id/treatmentlinearlayout"
+        android:layout_marginTop="16dp"
+        android:text="Frequency: " />
+
+    <TextView
+        android:id="@+id/frequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/frequencytitle"
+        android:layout_alignEnd="@+id/treatmentlinearlayout"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/durationtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/frequencytitle"
+        android:layout_below="@+id/frequency"
+        android:text="Duration: " />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/frequency"
+        android:layout_below="@+id/frequency"
+        android:text="TextView" />
+
+
+</RelativeLayout>

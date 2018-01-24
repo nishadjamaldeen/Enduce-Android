@@ -11,6 +11,7 @@
 
 
     <ListView
+        android:id="@+id/treatment"
         android:layout_width="299dp"
         android:layout_height="425dp"
         tools:layout_editor_absoluteX="31dp"

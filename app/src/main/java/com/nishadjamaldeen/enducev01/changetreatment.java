@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.nishadjamaldeen.enducev01.data.Treatment;
 
@@ -55,6 +57,9 @@ public class changetreatment extends AppCompatActivity
         Bundle bundle = intent.getBundleExtra("treatments");
         treatments = (ArrayList<Treatment>) bundle.getSerializable("treatments");
 
+        ListView listView = (ListView) findViewById(R.id.treatment);
+        ArrayAdapter<Treatment> arrayAdapter = new ArrayAdapter<Treatment>(this, android.R.layout.simple_list_item_1, treatments);
+        listView.setAdapter(arrayAdapter);
 
 
 

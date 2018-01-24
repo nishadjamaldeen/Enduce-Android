@@ -1,10 +1,12 @@
 package com.nishadjamaldeen.enducev01.data;
 
+import java.io.Serializable;
+
 /**
  * Created by anjam_000 on 2018-01-23.
  */
 
-public class Treatment {
+public class Treatment implements Serializable {
     private int frequency;
     private int intensity;
     private int duration;

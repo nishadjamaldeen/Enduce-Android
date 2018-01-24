@@ -42,7 +42,7 @@ public class HomeScreen extends AppCompatActivity {
     public void changeTreatment(View view){
         Intent intent = new Intent(this, changetreatment.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("treatments",treatments);
+        bundle.putSerializable("treatments",(Serializable) treatments);
         intent.putExtra("treatments", bundle);
         startActivity(intent);
 
