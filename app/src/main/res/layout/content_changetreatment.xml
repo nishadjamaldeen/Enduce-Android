@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.nishadjamaldeen.enducev01.changetreatment"
-    tools:showIn="@layout/app_bar_changetreatment">
+    tools:showIn="@layout/app_bar_changetreatment"
+    android:background="#ff8300">
 
+
+    <ListView
+        android:layout_width="299dp"
+        android:layout_height="425dp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="43dp" />
 </android.support.constraint.ConstraintLayout>
