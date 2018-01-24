@@ -26,6 +26,10 @@
         <activity
             android:name=".changetreatment"
             android:label="@string/title_activity_changetreatment"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Treatment"
+            android:label="@string/title_activity_treatment"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 

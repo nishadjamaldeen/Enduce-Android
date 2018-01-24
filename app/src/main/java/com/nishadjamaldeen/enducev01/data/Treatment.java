@@ -50,4 +50,28 @@ public class Treatment implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void incrementFreq(){
+        this.frequency++;
+    }
+
+    public void decrementFreq(){
+        this.frequency--;
+    }
+
+    public void incrementIntensity(){
+        this.intensity++;
+    }
+
+    public void decrementIntensity(){
+        this.intensity--;
+    }
+
+    public void incrementDuration(){
+        this.duration++;
+    }
+
+    public void decrementDuration(){
+        this.duration--;
+    }
 }

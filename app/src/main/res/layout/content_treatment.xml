@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.nishadjamaldeen.enducev01.Treatment"
+    tools:showIn="@layout/app_bar_treatment">
+
+    <EditText
+        android:id="@+id/editduration"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/editintensity"
+        android:layout_marginBottom="88dp"
+        android:background="@null"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:maxWidth="10dp"
+        android:text="44"
+        android:textSize="40dp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="140dp" />
+
+    <EditText
+        android:id="@+id/editintensity"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editfreq"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:maxWidth="10dp"
+        android:text="44"
+        android:textSize="40dp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="140dp" />
+
+    <EditText
+        android:id="@+id/editfreq"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@null"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:maxWidth="10dp"
+        android:text="44"
+        android:textSize="40dp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="140dp" />
+
+    <ImageButton
+        android:id="@+id/l1freq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="19dp"
+        android:scaleType="fitCenter"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:background="#ff8300"
+        app:srcCompat="@drawable/ic_keyboard_arrow_left_white_24dp"
+        android:layout_marginBottom="69dp"
+        android:layout_above="@+id/editintensity"
+        android:layout_toStartOf="@+id/editfreq" />
+
+    <ImageButton
+        android:id="@+id/l2freq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:background="#ff8300"
+        android:scaleType="fitCenter"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp"
+        android:layout_alignTop="@+id/l1freq"
+        android:layout_toEndOf="@+id/editfreq" />
+
+
+    <ImageButton
+        android:id="@+id/l1intensity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:background="#ff8300"
+        app:srcCompat="@drawable/ic_keyboard_arrow_left_white_24dp"
+        android:layout_alignTop="@+id/l2intensity"
+        android:layout_alignStart="@+id/l1freq" />
+
+    <ImageButton
+        android:id="@+id/l2intensity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ff8300"
+        android:scaleType="fitCenter"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp"
+        android:layout_alignTop="@+id/editintensity"
+        android:layout_alignStart="@+id/l2freq" />
+
+    <ImageButton
+        android:id="@+id/l1duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp"
+        android:background="#ff8300"
+        android:scaleType="fitCenter"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:layout_below="@+id/l2intensity"
+        android:layout_alignStart="@+id/l2intensity"
+        android:layout_marginTop="57dp" />
+
+    <ImageButton
+        android:id="@+id/l2duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_keyboard_arrow_left_white_24dp"
+        android:background="#ff8300"
+        android:scaleType="fitCenter"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:layout_alignTop="@+id/l1duration"
+        android:layout_alignStart="@+id/l1intensity" />
+
+    <TextView
+        android:id="@+id/freqtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Frequency"
+        android:layout_above="@+id/l1freq"
+        android:layout_toEndOf="@+id/l1freq" />
+
+    <TextView
+        android:id="@+id/intensitytitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:textSize="20dp"
+        android:text="Intensity"
+        android:layout_above="@+id/editintensity"
+        android:layout_alignStart="@+id/durationtitle" />
+
+    <TextView
+        android:id="@+id/durationtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/l2duration"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:text="Duration" />
+
+</RelativeLayout>
